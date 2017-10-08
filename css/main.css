@@ -1,0 +1,159 @@
+/**
+ * @Author: Alcwyn Parker <alcwynparker>
+ * @Date:   2017-09-25T15:47:37+01:00
+ * @Email:  alcwynparker@gmail.com
+ * @Project: COMP210
+ * @Filename: main.css
+ * @Last modified by:   alcwynparker
+ * @Last modified time: 2017-09-25T16:19:40+01:00
+ */
+ /* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+ */
+
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	font-size: 100%;
+ 	font: inherit;
+ 	vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section {
+ 	display: block;
+ }
+ body {
+ 	line-height: 1;
+ }
+ ol, ul {
+ 	list-style: none;
+ }
+ blockquote, q {
+ 	quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+ 	content: '';
+ 	content: none;
+ }
+
+ table {
+ 	border-collapse: collapse;
+ 	border-spacing: 0;
+ }
+body, html{
+  width:100%;
+  height:100%;
+  margin:0px;
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-size: 2em;
+  padding:10px;
+  font-weight:bold;
+}
+h2{
+  font-size: 1.4em;
+  padding:4px;
+}
+
+body{
+  background:#1e1e1e;
+  margin: 30px auto;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom:80px;
+}
+header{
+  text-align: center;
+  display:block;
+  width:100%;
+  height:100px;
+  background: #aaa;
+}
+
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #fff;
+background-color: #282828;
+}
+
+#navcontainer ul li a:hover
+{
+color: #123431;
+background-color: #369111;
+}
+
+.content{
+  width:100%;
+  min-height:400px;
+}
+
+nav ul{
+  margin:10px;
+}
+nav ul li{
+  margin:5px;
+}
+nav ul li a{
+  display:block;
+  width: 90%;
+  height:60px;
+  background-color: #999;
+  color: #000;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+}
+nav ul li a.selected{
+  text-decoration: underline;
+  background: #888;
+}
+nav ul li a:hover{
+  background: #111;
+}
+section{
+  margin:1%;
+  width:98%;
+  min-height:300px;
+  background: #555;
+  float: center;
+
+}
+footer{
+  clear: both;
+  width:100%;
+  height:35px;
+  background: #bbb;
+  position: bottom;
+  bottom: 0px;
+  padding:5px;
+}
