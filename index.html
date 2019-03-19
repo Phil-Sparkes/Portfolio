@@ -1,47 +1,39 @@
-<!DOCTYPE html>
- <html>
- 	<head>
- 		<meta name="author" content="Phil Sparkes" />
- 		<meta name="HandheldFriendly" content="true" />
- 		<meta name="MobileOptimized" content="320" />
+---
+title: Herring Cove
+---
+{% include showcase.html %}
+{% include greeting.html %}
 
-    <!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
- 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
- 		<link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
- 	</head>
- 	<body>
-
-    <div class="main-container">
-      <header>
-        <h1>[Phil Sparkes] </h1>
-        <h2>About</h2>
-       <div id="navcontainer">
-		   <ul>
-			   <li><a class="selected" href="index.html">About </a></li>
-			   <li><a href="Projects.html">Projects </a></li>
-			   <li><a href="Blog.html">Blog </a></li>
-			   <li><a href="Contact.html">Contact</a></li>
-			   <li><a href="Other.html">Other </a></li>
-		   </ul>
-       </div> 
-      </header>
-      <div class="content">
-       
-
-        <section>
-          <h2>Content goes here</h2>
-        </section>
-
-        <section>
-          <h2> and here! </h2>
-        </section>
-      </div>
-      <footer>
-        <h2>Phil Sparkes - 2017</h2>
-      </footer>
-    </div>
- 	</body>
- </html>
-
+{% if site.posts != empty %}
+<div class="recent-posts">
+  <h1>Recent Posts</h1>
+  {% for post in site.posts limit: 3 %}
+    {% if forloop.first %}
+      {% assign add_class = 'most-recent' %}
+      {% capture fresh_tag %}
+        &nbsp;<span class="badge"><smaller>FRESH</smaller></span>
+      {% endcapture %}
+    {% endif %}
+    <ul class="homepage-posts {{ add_class }}">
+      <li>
+        <span>
+          <h4>
+            <a href="{{ site.baseurl }}/{{ post.url }}">
+              {{ post.title }}
+            </a>
+            {{ fresh_tag }}
+            <time class="pull-right">
+              {{ post.date | date_to_string | date: "%b %-d, %Y"  }}
+            </time>
+          </h4>
+        </span>
+      </li>
+    </ul>
+    {% assign add_class = '' %}
+    {% assign fresh_tag = '' %}
+  {% endfor %}
+  <ul>
+    <a href="{{ site.baseurl }}/list.html">View More...</a>
+  </ul>
+</div>
+{% endif %}
